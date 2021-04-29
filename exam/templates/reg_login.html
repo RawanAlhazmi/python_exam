@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wishing App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Welcome! Sign in to make a wish!</h1>
+    <div id="main">
+        <!-- Regestration -->
+        <div id="reg">
+            <h1>Registration</h1>
+            <form action="/register" method="POST">
+                {% csrf_token %}
+                <p>First name: <input type="text" name="f_name"></p>
+                <p>Last name: <input type="text" name="l_name"></p>
+                <p>E-mail: <input type="email" name="email"></p>
+                <p>password: <input type="text" name="password"></p>
+                <p>Confirm PW: <input type="text" name="confirm_pw"></p>
+                <button id="reg_button" type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Login -->
+        <div id="log">
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                <p>E-mail: <input type="email" name="email"></p>
+                <p>password: <input type="text" name="password"></p>
+                <button id="log_button" type="submit">Log in</button>
+            </form>
+        </div>
+        <div id="errors">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    </div>
+</body>
+
+</html>

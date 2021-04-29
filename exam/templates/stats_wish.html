@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wishing App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="welcome"> Hello {{user.first_name}} {{user.last_name}}! These are your stats!</h1>
+        <a href="/wishes" id="logout"> Dashboard</a>
+        <a href="/destroy" id="logout"> Log out</a>
+    </div>
+
+    <h3>Total wishes granted so far for all users: {{g_wishes|length}}</h3>
+
+
+    <h3>Your granted wishes: {{user_g.all|length}}</h3> <!-- granted=true -->
+
+
+    <h3>Your pending wishes: {{user_p.all|length}}</h3> <!-- granted=false -->
+
+</body>
+
+</html>

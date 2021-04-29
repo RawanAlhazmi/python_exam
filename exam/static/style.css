@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted red; */
+}
+body{
+    width: 900px;
+    margin: 10% auto 10% auto;
+}
+#main{
+    margin: 0 auto 0 auto;
+}
+#errors{
+    width: 450px;
+    margin: 15px auto 0 auto;
+}
+#reg{
+    display: inline-block;
+    margin: 0 auto 0 200px;
+    border: 1px dotted darkgray;
+    padding: 15px;
+}
+#log{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px dotted darkgray;
+    padding: 15px;
+}
+h1{
+    text-align: center;
+}
+#reg_button{
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: darkgray;
+    margin-left: 65px;
+}
+#log_button{
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: darkgray;
+    margin-left: 55px;
+}
+table{
+    width: 500px;
+    margin: 0 auto 0 auto;
+}
+p{
+    text-align: center;
+}
+th,td{
+    text-align: center;
+    border: 1px dotted black;
+}
+th{
+    background-color: lightgray;
+}
+#header{
+    width: 900px;
+    background-color: rgb(237, 237, 237);
+}
+#welcome{
+    text-align: left;
+    display: inline-block;
+}
+#logout{
+    margin: 28px 5px 0 5px;
+    float: right;
+}
+.logout{
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: darkgray;
+    margin: 0 5px 0 5px;
+    float: right;
+}
+.button{
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: darkgray;
+    margin: 10px 5px 0 400px;
+    
+}
